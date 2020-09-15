@@ -26,7 +26,7 @@
 
     <!-- hero -->
     <section class="hero is-info is-medium">
-        <div class="hero-body" style="background-image: url({{ "img/bg-blog.jpg" | absURL }});">
+        <div class="hero-body" style="background-image: url({{ "img/banner.jpg" | absURL }});">
             <div class="container has-text-centered">
                 <br>
                 <h1 class="title is-size-1">
@@ -38,7 +38,8 @@
                         {{ .Title }}
                     {{ end }}
                 </h1>
-                {{ if eq .Type "article" }}
+                
+                {{ if eq .Type "post" }}
                     {{ .Date.Format "January 2, 2006" }} &middot;&nbsp;{{ .ReadingTime }} min read
                 {{ end }}
             </div>
